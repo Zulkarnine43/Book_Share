@@ -11,6 +11,14 @@
 |
 */
 
+Route::get('/admin/home', 'AdminController@admin_home')->name('admin_home');
+
+Route::get('/category/add', 'AdminController@category_add')->name('category_add');
+
+Route::get('/category/manage', 'AdminController@category_mng')->name('category_mng');
+
+Route::post('/category/db', 'AdminController@category_db')->name('category_db');
+
 Route::get('/user/signup', 'UserLoginController@user_signup')->name('user_signup');
 
 
@@ -30,3 +38,6 @@ Route::get('/', 'PagesController@index')->name('index');
 
 Route::get('/books', 'BooksController@index')->name('books.index');
 Route::get('/books/single-book', 'BooksController@show')->name('books.show');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
