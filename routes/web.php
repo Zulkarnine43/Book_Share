@@ -17,7 +17,13 @@ Route::get('/category/add', 'AdminController@category_add')->name('category_add'
 
 Route::get('/category/manage', 'AdminController@category_mng')->name('category_mng');
 
+Route::get('/category/edit/{id}', 'AdminController@category_edit')->name('category.edit');
+
+Route::post('/category/edit/db', 'AdminController@category_edit_db')->name('category_edit_db');
+
 Route::post('/category/db', 'AdminController@category_db')->name('category_db');
+
+Route::get('/category/delete/{id}', 'AdminController@category_delete')->name('category.delete');
 
 Route::get('/user/signup', 'UserLoginController@user_signup')->name('user_signup');
 

@@ -24,7 +24,7 @@
 
             <div class="form-group">
                 <label class="font-weight-bolder">Parent Categories(Opional)</label>
-                <input type="text" name="parent_id" class="form-control" placeholder="Enter parent_name"/>
+                <input type="number" name="parent_id" class="form-control" placeholder="Enter parent_name"/>
             </div>
 
 

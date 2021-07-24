@@ -26,8 +26,8 @@
                     <td>{{$categorie->parent_id}}</td>
                     <td>{{$categorie->status}}</td>
                     <td>
-                    <a href="" onclick="return confirm('Are you sure you want to edit?');" class="btn btn-success"><i class="fas fa-edit"></i></a>
-                        <a href="" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger "><i class="fas fa-trash-alt"></i></a>
+                    <a href="{{route('category.edit',['id'=>$categorie->id])}}" onclick="return confirm('Are you sure you want to edit?');" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                    <a href="{{route('category.delete',['id'=>$categorie->id])}}" onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger "><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
                     @endforeach
